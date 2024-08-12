@@ -4,12 +4,18 @@ const desktopController = new DesktopController();
 
 desktopController.run();
 
-async function fetchAndDisplayJSON() {
+async function fetchUrl(apiUrl) {
+  // Define the API URL
+    console.log("Fetching JSON data...");
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    console.log("Data fetched:", data);
+}
+
+async function fetchAndDisplayJSON(apiUrl) {
   try {
     console.log("Fetching JSON data...");
-    const response = await fetch(
-      "https://game-events-status.overwolf.com/5426_prod.json"
-    );
+    const response = await fetch(apiUrl);
     const data = await response.json();
     console.log("Data fetched:", data);
 
@@ -24,30 +30,26 @@ async function fetchAndDisplayJSON() {
     table.border = "1";
     const thead = document.createElement("thead");
     const headerRow = document.createElement("tr");
-    
+
     const headers = ["Name", "State"];
     headers.forEach((headerText) => {
       const th = document.createElement("th");
       th.textContent = headerText;
-      console.log("headerText:", headerText);
       headerRow.appendChild(th);
     });
-    
+
     thead.appendChild(headerRow);
     table.appendChild(thead);
 
-    
-    const tbody = document.createElement('tbody');
-    data.features.forEach(feature => {
-      
-      const row = document.createElement('tr');
-      
-      const nameCell = document.createElement('td');
+    const tbody = document.createElement("tbody");
+    data.features.forEach((feature) => {
+      const row = document.createElement("tr");
+
+      const nameCell = document.createElement("td");
       nameCell.textContent = feature.name;
-      console.log('feature.name:', feature.name);
       row.appendChild(nameCell);
 
-      const stateCell = document.createElement('td');
+      const stateCell = document.createElement("td");
       stateCell.textContent = feature.state;
       row.appendChild(stateCell);
 
@@ -60,4 +62,5 @@ async function fetchAndDisplayJSON() {
   }
 }
 
-fetchAndDisplayJSON();
+fetchUrl("https://euw1.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=RGAPI-efdd1f35-f758-4120-b0da-17bbdebcda73");
+fetchAndDisplayJSON("https://game-events-status.overwolf.com/5426_prod.json");
