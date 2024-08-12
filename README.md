@@ -1,3 +1,5 @@
+# Clash Companion
+
 La structure globale du code dans les dossiers de votre workspace semble être organisée de manière à séparer les différentes fonctionnalités et composants de l'application. Voici une explication détaillée de la structure :
 
 ### Racine du projet
