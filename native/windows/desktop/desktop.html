@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="../../css/header.css" />
     <link rel="stylesheet" href="../../css/desktop.css" />
     <link rel="stylesheet" href="../../css/modal.css" />
-    <title>Clash Compagnon - Desktop window</title>
+    <title>Clash Companion - Desktop window</title>
   </head>
   <body class="desktop">
     <!-- -------------------------------- Header ------------------------------- -->
 
     <header class="app-header">
       <img src="../../img/header_icon.svg" />
-      <h1>Sample App / desktop window</h1>
+      <h1>Clash Companion / desktop window</h1>
       <div class="window-controls-group">
         <button
           id="minimizeButton"
@@ -30,10 +30,11 @@
     <!-- --------------------------------- Main -------------------------------- -->
     <main>
       <div class="desktopTop">
-        <h1>Clash Compagnon</h1>
+        <h1>Clash Companion</h1>
         <p>
-          Welcome to the Overwolf tutorial app for developers.<br />
-          Learn how to build an app by using one!
+          Welcome to the Clash Companion desktop window! <br />
+          This window will pop-up when you launch the app without the neuille
+          launched.
         </p>
         <div id="version"></div>
       </div>
@@ -45,22 +46,17 @@
           </h1>
         </div>
         <!-- Launch a game! -->
-        <div id="middle">
-          What can you learn with this sample app?
-          <br /><br />
-          1. How to listen to real-time game events and how to identify specific
-          events like start/end match, kill, and death.
-          <br /><br />
-          2. How to use a transparent background window as a service bus, that
-          acts as the main controller of your app.
-          <br /><br />
-          3. How to use Hotkeys that show/hide your app while you are in-game.
+        <div id="jsonDataContainer">
+          <div id="jsonData" class="jsonTable"></div>
         </div>
         <!-- picture -->
         <div id="right">
           <div style="text-align: center">
             <div style="display: inline-block">
-              <img src="../../img/cool_wolf.png" />
+              <img
+                src="../../img/Clash_companion_temp_logo.png"
+                style="width: 250px; height: auto"
+              />
             </div>
           </div>
         </div>

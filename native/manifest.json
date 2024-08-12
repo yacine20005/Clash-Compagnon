@@ -2,15 +2,15 @@
   "manifest_version": 1,
   "type": "WebApp",
   "meta": {
-    "name": "Sample App",
-    "author": "Overwolf",
-    "version": "2.0.3",
+    "name": "Clash Companion",
+    "author": "Les neuilles",
+    "version": "1.0.0",
     "minimum-overwolf-version": "0.170.0",
-    "description": "An example app for developers new to Overwolf",
-    "icon": "icons/IconMouseOver.png",
-    "icon_gray": "icons/IconMouseNormal.png",
+    "description": "Une application pour les joueurs de Clash de League of Legends",
+    "icon": "icons/IconMouseOver.ico",
+    "icon_gray": "icons/IconMouseNormal.ico",
     "launcher_icon": "icons/desktop-icon.ico",
-    "window_icon": "icons/IconMouseOver.png"
+    "window_icon": "icons/IconMouseOver.ico"
   },
   "permissions": [
     "Hotkeys",

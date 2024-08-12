@@ -92,3 +92,55 @@ a {
   display: inline-block;
   margin-right: 10px;
 }
+
+#jsonDataContainer {
+  max-height: 350px; /* Ajustez cette valeur selon vos besoins */
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Styles pour le tableau JSON */
+.jsonTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  color: #333;
+  background-color: #464646;
+}
+
+/* Styles pour les en-têtes du tableau */
+.jsonTable th {
+  background-color: #464646;
+  color: #ffffff;
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+  border-bottom: 2px solid #333;
+}
+
+/* Styles pour les cellules du tableau */
+.jsonTable td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Styles pour les lignes impaires */
+.jsonTable tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+/* Styles pour les lignes paires */
+.jsonTable tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+/* Styles pour les lignes au survol */
+.jsonTable tr:hover {
+  background-color: #e0e0e0;
+}
+
+/* Styles pour les cellules de texte JSON */
+.jsonTable .jsonCell {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
