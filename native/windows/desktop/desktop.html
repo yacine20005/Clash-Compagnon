@@ -10,9 +10,12 @@
   </head>
   <body class="desktop">
     <!-- -------------------------------- Header ------------------------------- -->
-
     <header class="app-header">
-      <img src="../../img/header_icon.svg" />
+      <img
+        src="../../img/Clash_companion_temp_logo.ico"
+        width="22px"
+        height="22px"
+      />
       <h1>Clash Companion / desktop window</h1>
       <div class="window-controls-group">
         <button
@@ -26,24 +29,31 @@
         <button id="closeButton" class="window-control window-control-close" />
       </div>
     </header>
-
     <!-- --------------------------------- Main -------------------------------- -->
     <main>
       <div class="desktopTop">
         <h1>Clash Companion</h1>
-        <p>
-          Welcome to the Clash Companion desktop window! <br />
-          This window will pop-up when you launch the app without the neuille
-          launched.
-        </p>
         <div id="version"></div>
       </div>
       <div class="desktopBottom">
         <!-- Launch a game! -->
         <div id="left">
-          <h1>
-            Launch a game, and the In-Game window will pop-up automatically!
-          </h1>
+          <aside class="sidebar">
+            <ul class="nav">
+              <li class="nav-item"></a><i class="icon-home"></i> Main
+              </li>
+              <li class="nav-item"></a><i class="icon-chart"></i> Tab A
+              </li>
+              <li class="nav-item"><i class="icon-play"></i> Tab B</li>
+            </ul>
+            <ul class="footer-nav">
+              <li class="nav-item"><i class="icon-crown"></i> Premium</li>
+              <li class="nav-item" id="Status">
+                <i class="icon-status"></i> Status Simulator
+              </li>
+              <li class="nav-item"><i class="icon-settings"></i> Settings</li>
+            </ul>
+          </aside>
         </div>
         <!-- Launch a game! -->
         <div id="jsonDataContainer">
@@ -62,7 +72,6 @@
         </div>
       </div>
     </main>
-
     <script type="module" src="./desktop.js"></script>
   </body>
 </html>

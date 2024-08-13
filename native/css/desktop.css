@@ -14,6 +14,7 @@ main {
   display: flex;
   flex-direction: column;
   position: relative;
+  border: 2px solid red; /* Bordure rouge pour main */
 }
 
 a {
@@ -24,9 +25,10 @@ a {
   color: white;
   background-image: url("../img/background.svg");
   width: 100%;
-  height: 243px;
+  height: 100px;
   top: 0;
   text-align: center;
+  border: 2px solid green; /* Bordure verte pour desktopTop */
 }
 
 .desktopTop h1 {
@@ -35,7 +37,7 @@ a {
   font-weight: normal;
   font-size: 24px;
   color: #d5d5d5;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .desktopTop p {
@@ -48,7 +50,7 @@ a {
 }
 
 #version {
-  margin-top: 57px;
+  margin-top: 15px;
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -61,10 +63,12 @@ a {
   flex: 1;
   display: flex;
   padding: 67px 0px;
+  border: 2px solid blue; /* Bordure bleue pour desktopBottom */
 }
 
 .desktopBottom > #left {
-  flex: 1 1 30%;
+  flex: 1 1 10%;
+  border: 2px solid purple; /* Bordure violette pour le conteneur left */
 }
 
 .desktopBottom > #left > h1 {
@@ -77,15 +81,17 @@ a {
 }
 
 .desktopBottom > #middle {
-  flex: 1 1 40%;
+  flex: 1 1 80%;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
   color: #8d8d8d;
+  border: 2px solid orange; /* Bordure orange pour le conteneur middle */
 }
 
 .desktopBottom > #right {
-  flex: 1 1 30%;
+  flex: 1 1 10%;
+  border: 2px solid cyan; /* Bordure cyan pour le conteneur right */
 }
 
 #ad {
@@ -94,9 +100,11 @@ a {
 }
 
 #jsonDataContainer {
-  max-height: 350px; /* Ajustez cette valeur selon vos besoins */
+  max-height: calc(
+    100vh - 250px
+  ); /* Par exemple, 150px de marge pour d'autres éléments */
   overflow-y: auto;
-  overflow-x: hidden;
+  border: 2px solid yellow; /* Bordure jaune pour jsonDataContainer */
 }
 
 /* Styles pour le tableau JSON */
@@ -143,4 +151,60 @@ a {
 .jsonTable .jsonCell {
   white-space: pre-wrap;
   word-break: break-word;
+}
+
+/*  _______________________Neuille____________________________________ */
+
+.sidebar {
+  width: 100%;
+  background-color: #3c3c3c;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%; /* Prend toute la hauteur du conteneur parent */
+  box-sizing: border-box;
+  border: 2px solid pink; /* Bordure rose pour la sidebar */
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.nav,
+.footer-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #4d4d4d;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.nav-item:hover {
+  background-color: #616161;
+  border: 2px dashed white; /* Bordure en pointillés blanche pour nav-item */
+}
+
+.icon-home,
+.icon-chart,
+.icon-play,
+.icon-crown,
+.icon-status,
+.icon-settings {
+  margin-right: 10px;
+}
+
+#Status {
+  background-color: green;
 }

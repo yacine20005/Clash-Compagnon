@@ -6,18 +6,16 @@ desktopController.run();
 
 async function fetchUrl(apiUrl) {
   // Define the API URL
-    console.log("Fetching JSON data...");
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-    console.log("Data fetched:", data);
+  console.log("Fetching JSON data...");
+  const response = await fetch(apiUrl);
+  const data = await response.json();
+  console.log("Data fetched:", data);
+  return data;
 }
 
 async function fetchAndDisplayJSON(apiUrl) {
   try {
-    console.log("Fetching JSON data...");
-    const response = await fetch(apiUrl);
-    const data = await response.json();
-    console.log("Data fetched:", data);
+    let data = await fetchUrl(apiUrl);
 
     const jsonDataDiv = document.getElementById("jsonData");
     if (!jsonDataDiv) {
@@ -62,5 +60,15 @@ async function fetchAndDisplayJSON(apiUrl) {
   }
 }
 
-fetchUrl("https://euw1.api.riotgames.com/lol/platform/v3/champion-rotations?api_key=RGAPI-efdd1f35-f758-4120-b0da-17bbdebcda73");
-fetchAndDisplayJSON("https://game-events-status.overwolf.com/5426_prod.json");
+async function verifyStatus(apiUrl) {
+  let data = await fetchUrl(apiUrl);
+  for (let i = 0; i < data.features.length; i++) {
+    if (data.features[i].state != 1) {
+      console.error("API is down");
+      document.getElementById("Status").style.backgroundColor = "red";
+      return false;
+    }
+  }
+}
+
+verifyStatus("https://game-events-status.overwolf.com/5426_prod.json");
