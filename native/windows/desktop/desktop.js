@@ -71,4 +71,12 @@ async function verifyStatus(apiUrl) {
   }
 }
 
+function overwolfInfo() {
+  overwolf.games.events.getInfo(function (info) {
+    console.log(info);
+  });
+}
+
+fetchAndDisplayJSON("https://game-events.overwolf.com/5426_prod.json");
+
 verifyStatus("https://game-events-status.overwolf.com/5426_prod.json");
